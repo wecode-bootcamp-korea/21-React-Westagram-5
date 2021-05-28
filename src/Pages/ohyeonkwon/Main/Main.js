@@ -18,7 +18,7 @@ class Main extends React.Component {
                         <img
                           className="feeds-profile"
                           alt="profile"
-                          src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s320x320/130689853_2743696002514149_7606911086237819721_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=vs1HMDNwE20AX_Himy9&edm=ABfd0MgBAAAA&ccb=7-4&oh=c88d95692f3075c5c2437b94ab03118d&oe=60B0BD09&_nc_sid=7bff83"
+                          src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Color_icon_black.svg/300px-Color_icon_black.svg.png"
                         />
                       </div>
                       <div className="feeds-profile-wrap">
@@ -34,7 +34,10 @@ class Main extends React.Component {
                   </div>
 
                   <div className="feeds-img">
-                    <img src="/images/IMG_7807.jpg" alt="feeds" />
+                    <img
+                      src="../../images/ohyeonkwon/IMG_7807.jpg"
+                      alt="feeds"
+                    />
                   </div>
 
                   <div className="feeds-icon-wrap">
@@ -95,9 +98,8 @@ class Main extends React.Component {
                   <div className="feeds-like-info">
                     <div className="like-info-img">
                       <img
-                        className="info-img"
                         alt="wholike"
-                        src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/21690415_849658105189237_7965060341270839296_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=w5_0dMXRkQ0AX-DNban&edm=AEF8tYYBAAAA&ccb=7-4&oh=d85c0834fb66aa3ae200780849351c19&oe=60B15EA4&_nc_sid=a9513d"
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Color_icon_blue_%26_purple.png"
                       />
                     </div>
                     <div className="like-info-text">
@@ -110,102 +112,194 @@ class Main extends React.Component {
                   </div>
 
                   <div className="feeds-written">
-                    <div className="feeds-written-name">
-                      <span>groundcover_</span>
-                    </div>
-                    <div className="feeds-written-text">
-                      <span>무안 바다를 보며 1박캠핑!</span>
-                    </div>
+                    <span id="feedName">groundcover_</span>
+
+                    <span id="feedWrite">무안 바다를 보며 1박캠핑!</span>
                   </div>
 
-                  <div className="feeds-comment-wrap">
-                    <div className="comment">
-                      <ul className="comment-ul">
-                        <li class="comment-li">
-                          <div className="comment-container">
-                            <span className="comment-text">
-                              <span className="comment-name">
-                                headbingbing__
-                              </span>
-                              <span className="comment">
-                                ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ줄바꿈ㅋㅋㅋㅋㅋㅋㅋㅋ
-                              </span>
+                  <div className="comment">
+                    <ul>
+                      <li>
+                        <div className="comment-container">
+                          <span id="commentText">
+                            <span id="commentName">headbingbing__</span>
+                            <span id="liComment">
+                              ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ줄바꿈ㅋㅋㅋㅋㅋㅋㅋㅋ
                             </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="feeds-wrote-time">
-                      <span id="wrote-time">1일 전</span>
-                    </div>
-                    <div className="feeds-comment">
-                      <input
-                        className="comment-input"
-                        placeholder="댓글 달기..."
-                        type="text"
-                      />
-                      <button className="upload-btn">
-                        {' '}
-                        <span>게시</span>
-                      </button>
-                    </div>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="feeds-wrote-time">
+                    <span id="wrote-time">1일 전</span>
+                  </div>
+                  <div className="commentInput">
+                    <input placeholder="댓글 달기..." type="text" />
+                    <button className="upload-btn">
+                      <span>게시</span>
+                    </button>
                   </div>
                 </article>
               </div>
-              <div class="main-right-wrap">
-                <div class="profileBox">
-                  <div class="profilebox-profile">
-                    <div class="profilebox-profile-img"></div>
-                    <div class="profilebox-profile-name"></div>
-                    <div class="porfilebox-profile-index"></div>
-                  </div>
 
-                  <div>
-                    <div class="storyBox">
-                      <div class="storyText">
-                        <span>스토리</span>
-                      </div>
-                      <button class="stotyAll" type="button">
-                        <span>모두 보기</span>
-                      </button>
-                      <ul class="storyList">
-                        <li class="story-follwer">
-                          <img
-                            class="story-follower-img"
-                            alt="follwer profile"
-                          ></img>
-                          <div class="story-follower-name"></div>
-                          <div class="story-follower-time"></div>
-                        </li>
-                      </ul>
+              <div className="main-right-wrap">
+                <div className="profileBox">
+                  <div className="profileContainer">
+                    <img
+                      alt="Profile"
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Color_icon_blue_%26_purple.png"
+                    />
+                    <div className="profileContainerIndex">
+                      <span id="indexId">wecode_bootcamp</span>
+                      <span id="indexMsg">Wecode | 위코드</span>
                     </div>
                   </div>
-
-                  <div class="recommendBox">
-                    <div class="recommendText">
-                      <span>회원님을 위한 추천</span>
-                    </div>
-                    <button class="recommendAll" type="button">
-                      <span>모두 보기</span>
-                    </button>
-                    <ul class="recommendList">
-                      <li class="recommend-follower">
+                  <div className="storyBox">
+                    <span id="storyBoxTag">스토리</span>
+                    <button type="button">모두보기</button>
+                  </div>
+                  <div className="stoyContainer">
+                    <ul className="storyList">
+                      <li>
                         <img
-                          class="recommend-follower-img"
-                          alt="recommend follower"
+                          alt="follwer profile"
+                          src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Color_icon_pink.svg/300px-Color_icon_pink.svg.png"
                         ></img>
-                        <div class="recommend-follower-name"></div>
-                        <div class="recommend-followed">
-                          <span>회원님을 팔로우합니다</span>
+                        <div className="storyFollower">
+                          <span id="name">Test 1</span>
+                          <span id="time">30분전</span>
                         </div>
-                        <button class="recommendfollew" type="button">
+                      </li>
+                      <li>
+                        <img
+                          alt="follwer profile"
+                          src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Color_icon_pink.svg/300px-Color_icon_pink.svg.png"
+                        ></img>
+                        <div className="storyFollower">
+                          <span id="name">Test 1</span>
+                          <span id="time">30분전</span>
+                        </div>
+                      </li>
+                      <li>
+                        <img
+                          alt="follwer profile"
+                          src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Color_icon_pink.svg/300px-Color_icon_pink.svg.png"
+                        ></img>
+                        <div className="storyFollower">
+                          <span id="name">Test 1</span>
+                          <span id="time">30분전</span>
+                        </div>
+                      </li>
+                      <li>
+                        <img
+                          alt="follwer profile"
+                          src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Color_icon_pink.svg/300px-Color_icon_pink.svg.png"
+                        ></img>
+                        <div className="storyFollower">
+                          <span id="name">Test 1</span>
+                          <span id="time">30분전</span>
+                        </div>
+                      </li>
+                      <li>
+                        <img
+                          alt="follwer profile"
+                          src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Color_icon_pink.svg/300px-Color_icon_pink.svg.png"
+                        ></img>
+                        <div className="storyFollower">
+                          <span id="name">Test_1</span>
+                          <span id="time">30분전</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="recommendContainer">
+                  <div className="recommendBox">
+                    <span id="recommendBoxTag">회원님을 위한 추천</span>
+                    <button id="recommedButton" type="button">
+                      모두보기
+                    </button>
+                  </div>
+                  <div className="recommendListContainer">
+                    <ul className="recommendList">
+                      <li>
+                        <div className="followrs">
+                          <img
+                            alt="recommend follower"
+                            src="//upload.wikimedia.org/wikipedia/commons/e/e3/Color_icon_yellow.png"
+                          ></img>
+                          <div className="followerTag">
+                            <span id="followerName">Test_2</span>
+                            <span id="following">회원님을 팔로우합니다</span>
+                          </div>
+                        </div>
+                        <button class="recommendFollow" type="button">
+                          <span>팔로우</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div className="followrs">
+                          <img
+                            alt="recommend follower"
+                            src="//upload.wikimedia.org/wikipedia/commons/e/e3/Color_icon_yellow.png"
+                          ></img>
+                          <div className="followerTag">
+                            <span id="followerName">Test_2</span>
+                            <span id="following">회원님을 팔로우합니다</span>
+                          </div>
+                        </div>
+                        <button class="recommendFollow" type="button">
+                          <span>팔로우</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div className="followrs">
+                          <img
+                            alt="recommend follower"
+                            src="//upload.wikimedia.org/wikipedia/commons/e/e3/Color_icon_yellow.png"
+                          ></img>
+                          <div className="followerTag">
+                            <span id="followerName">Test_2</span>
+                            <span id="following">회원님을 팔로우합니다</span>
+                          </div>
+                        </div>
+                        <button class="recommendFollow" type="button">
+                          <span>팔로우</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div className="followrs">
+                          <img
+                            alt="recommend follower"
+                            src="//upload.wikimedia.org/wikipedia/commons/e/e3/Color_icon_yellow.png"
+                          ></img>
+                          <div className="followerTag">
+                            <span id="followerName">Test_2</span>
+                            <span id="following">회원님을 팔로우합니다</span>
+                          </div>
+                        </div>
+                        <button class="recommendFollow" type="button">
+                          <span>팔로우</span>
+                        </button>
+                      </li>
+                      <li>
+                        <div className="followrs">
+                          <img
+                            alt="recommend follower"
+                            src="//upload.wikimedia.org/wikipedia/commons/e/e3/Color_icon_yellow.png"
+                          ></img>
+                          <div className="followerTag">
+                            <span id="followerName">Test_2</span>
+                            <span id="following">회원님을 팔로우합니다</span>
+                          </div>
+                        </div>
+                        <button class="recommendFollow" type="button">
                           <span>팔로우</span>
                         </button>
                       </li>
                     </ul>
-                  </div>
-                  <div class="footer">
-                    <span>footer</span>
                   </div>
                 </div>
               </div>
