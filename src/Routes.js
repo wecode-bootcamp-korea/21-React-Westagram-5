@@ -1,18 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Loginkoh from "./pages/ohyeonkwon/Login/Login";
-import Mainkoh from "./pages/ohyeonkwon/Main/Main";
+import Loginkoh from './Pages/ohyeonkwon/Login/Login';
+import Mainkoh from './Pages/ohyeonkwon/Main/Main';
 
-import Loginldy from "./pages/doyunlee/Login/Login";
-import Mainldy from "./pages/doyunlee/Main/Main";
+import Loginldy from './Pages/doyunlee/Login/Login';
+import Mainldy from './Pages/doyunlee/Main/Main';
 
-import Loginlkw from "./pages/kiwanlee/Login/Login";
-import Mainlkw from "./pages/kiwanlee/Main/Main";
+import Loginlkw from './Pages/kiwanlee/Login/Login';
+import Mainlkw from './Pages/kiwanlee/Main/Main';
 
 class Routes extends React.Component {
   render() {
-    retrun(
+    return (
       <Router>
         <Switch>
           <Route exact path="/LoginH" component={Loginkoh} />
