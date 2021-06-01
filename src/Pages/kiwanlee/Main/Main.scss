@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-column {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.main {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  .contentBox {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    .mainContent {
+      display: flex;
+      flex-direction: row;
+      width: 960px;
+      margin: 0 auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .article {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        border: 1px solid lightgray;
+        width: 614px;
+        margin-right: 34px;
+        .content_1 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 3px;
+          .con1_img {
+            margin-left: 5px;
+            width: 4%;
+          }
+          .con1_id {
+            margin-left: 5px;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+        .content_2 {
+          margin-top: 7px;
+          width: 100%;
+          .con2_img1 {
+            height: 100%;
+            width: 612px;
+          }
+          .con2_icon {
+            display: flex;
+            flex-direction: row;
+            height: 4%;
+            height: 20px;
+            width: 20px;
+            .con2_icon1,
+            .con2_icon2,
+            .con2_icon3 {
+              margin-left: 10px;
+            }
+            .con2_icon1 {
+              display: inline-block;
+            }
+
+            .con2_icon4 {
+              margin-left: 470px;
+            }
+            .con2_icon5 {
+              display: none;
+            }
+          }
+        }
+        .reaction {
+          margin: 23px 0 0 10px;
+          .liked_people {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            .pic {
+              width: 25px;
+              height: 25px;
+            }
+            .point_span {
+              margin-left: 5px;
+            }
+          }
+          .description {
+            display: flex;
+            align-items: center;
+            height: 18px;
+            .desc_tag {
+              color: #003781;
+              margin-left: 3px;
+            }
+          }
+          .comments {
+            display: flex;
+            justify-content: space-between;
+            .comment_contents {
+              margin-left: 3px;
+            }
+            .desc_userID {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            .comment_heart1 {
+              width: 15px;
+              height: 15px;
+              display: inline-block;
+              cursor: pointer;
+              margin-right: 15px;
+            }
+            .comment_heart_liked {
+              width: 15px;
+              height: 15px;
+              cursor: pointer;
+              display: none;
+              margin-right: 15px;
+            }
+          }
+        }
+        .comment_form {
+          position: relative;
+          .input_box {
+            position: relative;
+            width: 100%;
+            height: 45px;
+            input {
+              width: 100%;
+              height: 100%;
+              padding: 0 10px;
+              box-sizing: border-box;
+              border: 1px solid #dbdbdb;
+              border-left: none;
+              border-right: none;
+              border-bottom: none;
+              font-size: 15px;
+            }
+          }
+          .button_box {
+            position: absolute;
+            right: 10px;
+            top: 11px;
+            .btn {
+              border: none;
+              span {
+                font-size: 15px;
+                color: #bfdffd;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      .sideBar {
+        margin-top: 50px;
+        width: 310px;
+        top: 94px;
+        .myProfile {
+          display: flex;
+          .pic {
+            width: 25px;
+            height: 25px;
+          }
+          .sub_span {
+            margin-left: 10px;
+            font-size: 25px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
