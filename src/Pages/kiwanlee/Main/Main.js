@@ -5,6 +5,38 @@ import Nav from '../../../Components/Nav/Nav';
 //클래스형 표현
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      noDisplaying: 'none',
+      displaying: 'inline-block',
+      comment: '',
+      commentsList: [],
+    };
+  }
+  //하트채우기
+  heartLiked = () => {
+    if (this.state.displaying === 'inline-block') {
+      this.setState({ displaying: 'none' });
+      this.setState({ noDisplaying: 'inline-block' });
+    } else {
+      this.setState({ displaying: 'inline-block' });
+      this.setState({ noDisplaying: 'none' });
+    }
+  };
+  //댓글
+  handleInput = e => {
+    this.setState({
+      comment: e.target.value,
+    });
+  };
+  addComments = () => {
+    console.log('good');
+    this.setState({
+      commentsList: this.state.commentsList.concat(this.state.comment),
+      comment: '',
+    });
+  };
   render() {
     return (
       <body>
@@ -81,20 +113,35 @@ class Main extends React.Component {
                         <span className="comment_contents">
                           내가 신으면 더 잘어울릴 것 같아...!
                         </span>
-                      </span>
-                      <div>
                         <div className="comment_like">
                           <img
+                            style={{ display: this.state.displaying }}
+                            onClick={this.heartLiked}
                             className="comment_heart1"
                             src="/images/kiwanlee/하트1.png"
                             alt="하트1"
                           />
                           <img
+                            style={{ display: this.state.noDisplaying }}
+                            onClick={this.heartLiked}
                             className="comment_heart_liked"
                             src="/images/kiwanlee/좋아요하트.png"
                             alt="좋아요된하트"
                           />
                         </div>
+                      </span>
+
+                      <div>
+                        {this.state.commentsList.map((ele, idx) => {
+                          return (
+                            <span key={ele + idx}>
+                              <p>
+                                <span className="desc_userID">guy2895</span>
+                                <span className="comment_contents">{ele}</span>
+                              </p>
+                            </span>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -102,13 +149,19 @@ class Main extends React.Component {
                 <form className="comment_form">
                   <div className="input_box">
                     <input
+                      onChange={this.handleInput}
+                      value={this.state.comment}
                       id="comment_input"
                       type="text"
                       placeholder="댓글달기..."
                     />
                   </div>
                   <div className="button_box">
-                    <button type="button" className="btn" disabled="disabled">
+                    <button
+                      onClick={this.addComments}
+                      type="button"
+                      className="btn"
+                    >
                       <span className="">게시</span>
                     </button>
                   </div>

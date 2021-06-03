@@ -25,7 +25,7 @@ class Login extends React.Component {
   handleInputPw = e => {
     this.setState({ inputPw: e.target.value });
     e.target.value.length > 4
-      ? this.setState({ inputId: e.target.value, pwChecked: true }, () =>
+      ? this.setState({ inputPw: e.target.value, pwChecked: true }, () =>
           this.btnChangeColor()
         )
       : this.setState({ pwChecked: false }, () => this.btnChangeColor());
@@ -37,10 +37,23 @@ class Login extends React.Component {
       : this.setState({ background: '#bfdffd', disabled: true });
   };
   goToMain = () => {
-    window.location.href = './mainW';
+    fetch('http://10.58.6.180:8000/authenticate/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.inputId,
+        password: this.state.inputPw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.token) {
+          this.props.history.push('/mainW');
+        }
+      });
   };
 
   render() {
+    console.log(this.state);
     return (
       <body>
         <div className="Login">
