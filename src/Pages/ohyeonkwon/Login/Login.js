@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Login.scss';
 //import { Link } from 'react-router-dom';
 
@@ -9,13 +9,34 @@ class Login extends React.Component {
     this.state = {
       id: '',
       pw: '',
+      nickname: 'nickname',
+      phone_number: '010-1234-5626',
       background: '',
       disabled: true,
     };
   }
 
   goMain = () => {
-    this.props.history.push('/MainH');
+    this.props.history.push('/mainH');
+    // fetch('http://10.58.7.108:8000/user/signin', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: this.state.id,
+    //     password: this.state.pw,
+    //     nickname: this.state.nickname,
+    //     phone_number: this.state.phone_number,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => {
+    //     if (result.token) {
+    //       //성공
+    //       alert('success');
+    //       this.props.history.push('/mainH');
+    //     } else {
+    //       //fail
+    //     }
+    //   });
   };
 
   inputValue = e => {

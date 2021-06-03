@@ -1,6 +1,8 @@
 import React from 'react';
 import './Main.scss';
 import Nav from '../../../Components/Nav/Nav';
+import Feeds from '../Feeds/Feeds';
+
 class Main extends React.Component {
   render() {
     return (
@@ -94,52 +96,7 @@ class Main extends React.Component {
                       </div>
                     </div>
                   </div>
-
-                  <div className="feeds-like-info">
-                    <div className="like-info-img">
-                      <img
-                        alt="wholike"
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Color_icon_blue_%26_purple.png"
-                      />
-                    </div>
-                    <div className="like-info-text">
-                      <span>jayorjaehyeok</span>님&nbsp;
-                      <div>
-                        외 <span>123</span>명
-                      </div>
-                      이 좋아합니다.
-                    </div>
-                  </div>
-
-                  <div className="feeds-written">
-                    <span id="feedName">groundcover_</span>
-
-                    <span id="feedWrite">무안 바다를 보며 1박캠핑!</span>
-                  </div>
-
-                  <div className="comment">
-                    <ul>
-                      <li>
-                        <div className="comment-container">
-                          <span id="commentText">
-                            <span id="commentName">headbingbing__</span>
-                            <span id="liComment">
-                              ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ줄바꿈ㅋㅋㅋㅋㅋㅋㅋㅋ
-                            </span>
-                          </span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="feeds-wrote-time">
-                    <span id="wrote-time">1일 전</span>
-                  </div>
-                  <div className="commentInput">
-                    <input placeholder="댓글 달기..." type="text" />
-                    <button className="upload-btn">
-                      <span>게시</span>
-                    </button>
-                  </div>
+                  <Feeds />
                 </article>
               </div>
 
