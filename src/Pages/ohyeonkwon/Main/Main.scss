@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 1000px;
+      height: 100%;
+
+      .feeds {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 688px;
+        height: 100%;
+        margin-right: 8px;
+
+        article {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 656px;
+          height: 844px;
+
+          .feeds-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 640px;
+
+            .feeds-profile {
+              display: flex;
+              align-items: center;
+
+              .feeds-profile-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                flex-direction: column;
+                margin-left: 16px;
+              }
+
+              .feeds-profile-name span {
+                font-weight: bold;
+              }
+
+              .feeds-profile-location span {
+                font-size: 12px;
+              }
+            }
+
+            .imgBox {
+              box-sizing: border-box;
+              position: relative;
+              width: 32px;
+              height: 32px;
+              overflow: hidden;
+              margin-left: 16px;
+              border-radius: 50%;
+              border-radius: 50%;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          .feeds-img {
+            background-color: slategray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 640;
+            height: 640px;
+
+            img {
+              width: 640px;
+              height: 640px;
+            }
+          }
+
+          .feeds-icon-wrap {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            width: 640px;
+            height: 52px;
+
+            .feeds-icon-left {
+              display: flex;
+              align-items: center;
+              margin-left: 8px;
+              div {
+                margin-right: 22px;
+              }
+            }
+
+            .feeds-icon-right {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .feeds-icon-right div {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .main-right-wrap {
+      display: flex;
+      flex-direction: column;
+      width: 304px;
+      height: 844px;
+      margin-left: 8px;
+
+      .profileBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .profileContainer {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 64px;
+          img {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+          .profileContainerIndex {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            #indexId {
+              font-weight: 800;
+              margin-left: 8px;
+            }
+            #indexMsg {
+              font-size: small;
+              margin-left: 8px;
+              font-weight: 600;
+              color: gray;
+              opacity: 0.5;
+            }
+          }
+        }
+
+        .storyBox {
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          background-color: white;
+
+          #storyBoxTag {
+            font-size: small;
+            font-weight: 800;
+            margin: 4 4 4 4px;
+            color: gray;
+            opacity: 0.8;
+          }
+          button {
+            margin: 4 4 4 4px;
+            background: none;
+            font-size: small;
+            font-weight: 800;
+            border: none;
+          }
+        }
+
+        .stoyContainer {
+          margin-top: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          max-height: 160px;
+
+          ul {
+            width: 100%;
+            height: auto;
+
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
+          li {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            padding-bottom: 8px;
+            img {
+              margin-left: 8px;
+              border-radius: 50%;
+              width: 32px;
+              height: 32px;
+            }
+            .storyFollower {
+              margin-left: 8px;
+              display: flex;
+              flex-direction: column;
+              #name {
+                font-weight: 800;
+              }
+              #time {
+                font-size: x-small;
+                font-weight: 800;
+                color: gray;
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+      .recommendContainer {
+        margin-top: 52px;
+        .recommendBox {
+          background-color: yellowgreen;
+          width: 100%;
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          background-color: white;
+
+          #recommendBoxTag {
+            font-size: small;
+            font-weight: 800;
+            margin: 4 4 4 4px;
+            color: gray;
+            opacity: 0.8;
+          }
+          #recommedButton {
+            margin: 4 4 4 4px;
+            background: none;
+            font-size: small;
+            font-weight: 800;
+            border: none;
+          }
+        }
+        .recommendListContainer {
+          margin-top: 8px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          max-height: 160px;
+          .recommendList {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            li {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              height: 40px;
+              padding-bottom: 8px;
+              .followrs {
+                margin-left: 8px;
+                display: flex;
+                text-align: left;
+                img {
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                }
+                .followerTag {
+                  margin-left: 8px;
+                  display: flex;
+                  flex-direction: column;
+                  #followerName {
+                    font-weight: 800;
+                  }
+                  #following {
+                    font-size: small;
+                    font-weight: 600;
+                    color: gray;
+                    opacity: 0.5;
+                  }
+                }
+              }
+              .recommendFollow {
+                background: none;
+                border: none;
+                cursor: pointer;
+                span {
+                  color: rgba(64, 149, 225, 0.35);
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

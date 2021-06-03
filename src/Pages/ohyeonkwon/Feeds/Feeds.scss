@@ -1,0 +1,146 @@
+.feeds-like-info {
+  margin-top: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 640px;
+  height: 36px;
+
+  .like-info-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  .like-info-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 8px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.feeds-written {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 640px;
+  height: 36px;
+
+  #feedName {
+    margin-top: 8px;
+    margin-left: 8px;
+    font-weight: 800;
+  }
+
+  #feedWrite {
+    margin-top: 8px;
+    margin-left: 4px;
+  }
+}
+
+.commnetul {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+  li {
+    .comment-container {
+      display: flex;
+      justify-content: left;
+      align-content: center;
+      width: 624px;
+      -webkit-box-direction: normal;
+
+      #commentText {
+        overflow: break-word;
+        vertical-align: baseline;
+        font: inherit;
+
+        #commentName {
+          font-weight: 800;
+        }
+        #liComment {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+.commentInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(70, 70, 70);
+  width: 640px;
+  height: 48px;
+  text-indent: 8px;
+  border: none;
+  outline: none;
+
+  input {
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    width: 640px;
+    height: 48px;
+    margin: 0 auto;
+    text-indent: 8px;
+    &::placeholder {
+      text-indent: 8px;
+    }
+  }
+
+  .upload-btn {
+    margin-left: 4px;
+    margin-right: 4px;
+
+    background: none;
+    color: rgba(64, 149, 225, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+.feeds-wrote-time {
+  margin-top: 8px;
+  width: 640px;
+  font-size: 12px;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+
+  #wrote-time {
+    display: flex;
+    font-weight: 800;
+    color: rgb(184, 185, 185);
+    margin-left: 8px;
+  }
+}
